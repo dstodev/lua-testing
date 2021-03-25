@@ -3,22 +3,22 @@ module.__index = module
 
 
 function module.new()
-    local self = {}
+	local self = {}
 
-    self._value = 0
+	self._value = 0
 
-    setmetatable(self, module)
-    return self
+	setmetatable(self, module)
+	return self
 end
 
 function module:value(value)
-    if value == nil then
-        -- getter
-        return self._value
-    else
-        -- setter
-        self._value = value
-    end
+	if value == nil then
+		-- getter
+		return self._value
+	else
+		-- setter
+		self._value = value
+	end
 end
 
 
