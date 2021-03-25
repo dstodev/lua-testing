@@ -1,0 +1,3 @@
+[submodule "lib/u-test"]
+	path = lib/u-test
+	url = https://github.com/IUdalov/u-test.git
