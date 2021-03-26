@@ -1,14 +1,15 @@
 local module = {}
-module.__index = module
 
 
-function module.new()
-	local self = {}
+-- Inheritance idiom: https://www.lua.org/pil/16.2.html
+function module:new(instance)
+	local instance = instance or {}
 
-	self._value = 0
+	self._value = 0  -- Should this be 'instance._value = 0' instead?
 
-	setmetatable(self, module)
-	return self
+	setmetatable(instance, self)
+	self.__index = self
+	return instance
 end
 
 function module:value(value)

@@ -10,7 +10,7 @@ local module = {}
 
 	It requires that:
 		* The class is instantiable as:
-			instance = class.new()
+			instance = Class:new()
 
 		* The property is usable as:
 			get_value = instance:property()
@@ -24,7 +24,7 @@ function module.test_property(class, property, initial_value, set_value, n)
 	local _n = n or 2
 
 	for i = 1, _n do
-		local instance = class.new()
+		local instance = class:new()
 		local get = module.getter(instance, property)
 		local set = module.setter(instance, property)
 
