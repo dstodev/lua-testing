@@ -1,0 +1,25 @@
+@startuml Lua heirarchy new()
+
+participant base
+note over base #LightCyan
+<code>
+
+</code>
+end note
+
+participant "derived 1" as d1
+/ note over d1 #LightCyan
+<code>
+
+</code>
+end note
+
+d1 -> base : new()
+note left #LightCyan
+<code>
+	setmetatable(derived, base)
+	derived.__index = derived
+</code>
+end note
+
+@enduml

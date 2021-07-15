@@ -1,5 +1,5 @@
-local FirstDerived = require 'src.first_derived'
-local module = FirstDerived:new()
+local D1 = require 'src.derived_1'
+local module = D1:new()
 
 
 function module:new(instance)

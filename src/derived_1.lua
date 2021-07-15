@@ -1,5 +1,5 @@
-local MyClass = require 'src.myclass'
-local module = MyClass:new()
+local Base = require 'src.base'
+local module = Base:new()
 
 
 function module:new(instance)

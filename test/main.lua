@@ -5,8 +5,8 @@ local Util = require 'util'
 
 Test.register_assert('property', Util.test_property)
 
-require 'test_myclass'
-require 'test_first_derived'
-require 'test_second_derived'
+require 'test_base'
+require 'test_derived_1'
+require 'test_derived_2'
 
 Test.summary()

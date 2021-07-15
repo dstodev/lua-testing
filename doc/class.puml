@@ -1,0 +1,34 @@
+@startuml Lua heirarchy class
+
+class base
+class "derived 1" as d1
+class "derived 2" as d2
+
+object "instance" as b_i
+object "instance" as d1_i
+object "instance" as d2_i
+
+' Base
+base : __index = this
+base : value()
+
+b_i .right.> base : mt
+b_i : _value
+
+' D1
+d1 -up-> base
+d1 : __index = this
+d1 : value2()
+
+d1_i .right.> d1 : mt
+d1_i : _value2
+
+' D2
+d2 -up-> d1
+d2 : __index = this
+d2 : value3()
+
+d2_i .right.> d2 : mt
+d2_i : _value3
+
+@enduml

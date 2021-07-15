@@ -1,8 +1,8 @@
-local Class = require 'src.myclass'
-local Test = require 'src.second_derived'
+local Base = require 'src.base'
+local Test = require 'src.derived_2'
 
-local c1 = Class:new()
-local c2 = Class:new()
+local c1 = Base:new()
+local c2 = Base:new()
 
 print(c1:value())
 print(c2:value())
